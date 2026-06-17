@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="C971project.Views.CourseEditPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Course">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="16" Spacing="12">
+
+            <Label Text="Course Title" />
+            <Entry Text="{Binding Title}" Placeholder="e.g., Mobile Development" />
+
+            <Label Text="Start Date" />
+            <DatePicker Date="{Binding StartDate}" />
+
+            <Label Text="End Date (Due Date)" />
+            <DatePicker Date="{Binding EndDate}" />
+
+            <Label Text="Status" />
+            <Picker SelectedItem="{Binding Status}">
+                <Picker.Items>
+                    <x:String>In Progress</x:String>
+                    <x:String>Completed</x:String>
+                    <x:String>Dropped</x:String>
+                    <x:String>Plan To Take</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="Instructor Name" />
+            <Entry Text="{Binding InstructorName}" Placeholder="Name" />
+
+            <Label Text="Instructor Phone" />
+            <Entry Text="{Binding InstructorPhone}" Keyboard="Telephone" Placeholder="555-123-4567" />
+
+            <Label Text="Instructor Email" />
+            <Entry Text="{Binding InstructorEmail}" Keyboard="Email" Placeholder="name@email.com" />
+
+            <Label Text="Notes (Optional)" />
+            <Editor Text="{Binding Notes}" AutoSize="TextChanges" HeightRequest="120" />
+
+            <Button Text="Share Notes" Command="{Binding ShareNotesCommand}" />
+
+            <Label Text="Course Notifications" FontAttributes="Bold" />
+            <HorizontalStackLayout Spacing="12">
+                <CheckBox IsChecked="{Binding NotifyStart}" />
+                <Label Text="Notify on Start Date" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="12">
+                <CheckBox IsChecked="{Binding NotifyEnd}" />
+                <Label Text="Notify on End Date" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+            <Button Text="Assessments" Command="{Binding OpenAssessmentsCommand}" />
+
+            <Button Text="Save" Command="{Binding SaveCommand}" />
+            <Button Text="Delete" Command="{Binding DeleteCommand}" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

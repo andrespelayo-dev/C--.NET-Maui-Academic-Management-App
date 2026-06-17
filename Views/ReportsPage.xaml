@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="C971project.Views.ReportsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Reports">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="16" Spacing="12">
+
+            <Label
+                FontAttributes="Bold"
+                FontSize="26"
+                Text="Course Progress Report" />
+
+            <Label
+                x:Name="TimestampLabel"
+                FontSize="14"
+                Opacity="0.8"
+                Text="Generated: " />
+
+            <Frame Padding="10">
+                <Grid ColumnDefinitions="2*,1.4*,1.4*,1.4*,1.2*" ColumnSpacing="8">
+                    <Label Grid.Column="0" FontAttributes="Bold" Text="Course" />
+                    <Label Grid.Column="1" FontAttributes="Bold" Text="Status" />
+                    <Label Grid.Column="2" FontAttributes="Bold" Text="Start" />
+                    <Label Grid.Column="3" FontAttributes="Bold" Text="End" />
+                    <Label Grid.Column="4" FontAttributes="Bold" Text="Assessments" />
+                </Grid>
+            </Frame>
+
+            <CollectionView x:Name="ReportCollection">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="0,4" Padding="10">
+                            <Grid ColumnDefinitions="2*,1.4*,1.4*,1.4*,1.2*" ColumnSpacing="8">
+                                <Label Grid.Column="0" Text="{Binding CourseTitle}" />
+                                <Label Grid.Column="1" Text="{Binding Status}" />
+                                <Label Grid.Column="2" Text="{Binding StartDateText}" />
+                                <Label Grid.Column="3" Text="{Binding EndDateText}" />
+                                <Label Grid.Column="4" Text="{Binding AssessmentCountText}" />
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

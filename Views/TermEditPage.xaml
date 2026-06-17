@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="C971project.Views.TermEditPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Term">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="16" Spacing="12">
+            <Label Text="Term Title" />
+            <Entry Text="{Binding Title}" Placeholder="e.g., Term 1" />
+
+            <Label Text="Start Date" />
+            <DatePicker Date="{Binding StartDate}" />
+
+            <Label Text="End Date" />
+            <DatePicker Date="{Binding EndDate}" />
+
+            <Button Text="Save" Command="{Binding SaveCommand}" />
+            <Button Text="Delete" Command="{Binding DeleteCommand}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

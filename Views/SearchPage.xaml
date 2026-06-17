@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="C971project.Views.SearchPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Search">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="16" Spacing="12">
+
+            <Label
+                FontAttributes="Bold"
+                FontSize="24"
+                Text="Search Courses and Assessments" />
+
+            <Label
+                FontSize="14"
+                Opacity="0.8"
+                Text="Search by course title, assessment title, or assessment type." />
+
+            <Entry
+                x:Name="SearchEntry"
+                Placeholder="Enter search text" />
+
+            <Button
+                Clicked="OnSearchClicked"
+                Text="Search" />
+
+            <Label
+                x:Name="ResultsLabel"
+                FontAttributes="Bold"
+                FontSize="16"
+                Text="Results"
+                IsVisible="False" />
+
+            <Label
+                x:Name="NoResultsLabel"
+                FontSize="14"
+                Text="No results found."
+                IsVisible="False" />
+
+            <CollectionView x:Name="ResultsCollection">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="0,6" Padding="12">
+                            <VerticalStackLayout Spacing="4">
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="18"
+                                    Text="{Binding Title}" />
+
+                                <Label
+                                    FontAttributes="Italic"
+                                    Text="{Binding ResultType}" />
+
+                                <Label Text="{Binding Subtitle}" />
+                                <Label Text="{Binding DetailLine1}" />
+                                <Label Text="{Binding DetailLine2}" />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

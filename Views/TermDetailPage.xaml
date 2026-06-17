@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="C971project.Views.TermDetailPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Term Detail">
+
+    <VerticalStackLayout Padding="16" Spacing="12">
+
+        <Label Text="{Binding Term.Title}" FontSize="22" FontAttributes="Bold" />
+        <Label Text="{Binding Term.StartDate, StringFormat='Start: {0:MM/dd/yyyy}'}" />
+        <Label Text="{Binding Term.EndDate, StringFormat='End: {0:MM/dd/yyyy}'}" />
+
+        <Button Text="Edit Term" Command="{Binding EditTermCommand}" />
+
+        <HorizontalStackLayout Spacing="12">
+            <Label Text="Courses" FontSize="18" FontAttributes="Bold" VerticalOptions="Center" />
+            <Button Text="Add Course" Command="{Binding AddCourseCommand}" />
+        </HorizontalStackLayout>
+
+        <CollectionView ItemsSource="{Binding Courses}" SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="12" Margin="0,0,0,10">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="16" />
+                            <Label Text="{Binding StartDate, StringFormat='Start: {0:MM/dd/yyyy}'}" />
+                            <Label Text="{Binding EndDate, StringFormat='End: {0:MM/dd/yyyy}'}" />
+
+                            <Button Text="Open"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.OpenCourseCommand}"
+                                    CommandParameter="{Binding .}" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </VerticalStackLayout>
+</ContentPage>
