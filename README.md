@@ -1,6 +1,6 @@
 # .NET MAUI Academic Management Application
 
-A cross-platform academic management application developed using C# and .NET MAUI as part of Western Governors University's Software Engineering program.
+A C# and .NET MAUI cross-platform academic management application developed as part of Western Governors University's Software Engineering program.
 
 ## Features
 
@@ -35,17 +35,13 @@ A cross-platform academic management application developed using C# and .NET MAU
 - Resources - Images and application assets
 
 ## Screenshots
-
-<img width="411" height="887" alt="Screenshot 2026-06-16 154913" src="https://github.com/user-attachments/assets/cb15b49a-47dd-4e75-9654-af9678572e56" />
-<img width="409" height="885" alt="Screenshot 2026-06-16 155055" src="https://github.com/user-attachments/assets/7c398acf-a848-414c-8753-54bb2ff6f48d" />
+<img width="411" height="888" alt="Screenshot 2026-06-17 145608" src="https://github.com/user-attachments/assets/ff9f6469-bb93-4a2c-a09c-4d2d499acffe" />
+<img width="406" height="892" alt="Screenshot 2026-06-16 155353" src="https://github.com/user-attachments/assets/049e491a-5aaa-45b4-a4da-262a0b753439" />
 <img width="410" height="885" alt="Screenshot 2026-06-16 155045" src="https://github.com/user-attachments/assets/237e5da7-3a37-49ed-becc-c85e0fd95585" />
+<img width="408" height="890" alt="Screenshot 2026-06-17 145639" src="https://github.com/user-attachments/assets/d25604b3-87da-47f6-aa2c-84de09c8078e" />
+<img width="409" height="885" alt="Screenshot 2026-06-16 155055" src="https://github.com/user-attachments/assets/7c398acf-a848-414c-8753-54bb2ff6f48d" />
 <img width="410" height="842" alt="Screenshot 2026-06-16 155432" src="https://github.com/user-attachments/assets/2e3a1dd3-ff09-442a-b3d7-ef71f4876046" />
 <img width="412" height="887" alt="Screenshot 2026-06-16 155423" src="https://github.com/user-attachments/assets/802343c0-20ef-4e35-9b44-3044fdfa2ea7" />
-<img width="406" height="892" alt="Screenshot 2026-06-16 155353" src="https://github.com/user-attachments/assets/049e491a-5aaa-45b4-a4da-262a0b753439" />
-
-<img width="408" height="890" alt="Screenshot 2026-06-17 145639" src="https://github.com/user-attachments/assets/d25604b3-87da-47f6-aa2c-84de09c8078e" />
-<img width="411" height="888" alt="Screenshot 2026-06-17 145608" src="https://github.com/user-attachments/assets/ff9f6469-bb93-4a2c-a09c-4d2d499acffe" />
-
 
 ## About
 
@@ -66,5 +62,5 @@ In addition to the features shown in the screenshots, this project includes vali
 
 ## Challenges and Solutions
 
-A key challenge in this project was managing related entities such as terms, courses, and assessments while keeping the workflow simple for the user. I addressed this by organizing responsibilities across models, viewmodels, and services, which improved maintainability and navigation flow.
-Another challenge was ensuring data reliability. I implemented validation checks, tested edge cases, and used emulator-based debugging to resolve issues involving persistence, reminders, and input handling.
+A key challenge in this project was managing related entities such as terms, courses, and assessments while keeping the workflow simple for the user. I addressed this by organizing responsibilities across models, viewmodels, and services.
+Another challenge was ensuring data reliability. I implemented validation checks, tested edge cases, and used debugging to resolve issues involving persistence, reminders, and input handling.
